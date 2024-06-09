@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas Dinámicas</title>
+<!-- Incluir Bootstrap vía CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .tarjeta {
+    margin: 10px;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <!-- Tarjeta 1 -->
+    <div class="col-md-4 tarjeta">
+      <div class="card" id="tarjeta1">
+        <div class="card-body">
+          <h5 class="card-title">Contenedor 1</h5>
+          <p class="card-text">Contenedor que cambia de color</p>
+          <button onclick="cambiarColor('tarjeta1')" class="btn btn-primary">Cambiar Color</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 2 -->
+    <div class="col-md-4 tarjeta">
+      <div class="card" id="tarjeta2">
+        <div class="card-body">
+          <h5 class="card-title">Contenedor 2</h5>
+          <p class="card-text">Contenedor que cambia de color.</p>
+          <button onclick="cambiarColor('tarjeta2')" class="btn btn-primary">Cambiar Color</button>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 3 -->
+    <div class="col-md-4 tarjeta">
+      <div class="card" id="tarjeta3">
+        <div class="card-body">
+          <h5 class="card-title">Contenedor 3</h5>
+          <p class="card-text">Contenedor que cambia de color.</p>
+          <button onclick="cambiarColor('tarjeta3')" class="btn btn-primary">Cambiar Color</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Incluir jQuery y Bootstrap JS vía CDN -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+function cambiarColor(idTarjeta) {
+  const colores = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+  const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+  document.getElementById(idTarjeta).style.backgroundColor = colorAleatorio;
+}
+</script>
+
+</body>
+</html>
